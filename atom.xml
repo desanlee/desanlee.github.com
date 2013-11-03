@@ -1,16 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[Desan Lee | 德三]]></title>
   <link href="http://desanlee.github.io/atom.xml" rel="self"/>
   <link href="http://desanlee.github.io/"/>
-  <updated>2013-11-03T17:27:02+08:00</updated>
+  <updated>2013-11-03T21:07:35+08:00</updated>
   <id>http://desanlee.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Desan Lee]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Deploy Desan's blog on Github]]></title>
+    <link href="http://desanlee.github.io/blog/2013/11/03/deploy-desans-blog-on-github/"/>
+    <updated>2013-11-03T20:50:00+08:00</updated>
+    <id>http://desanlee.github.io/blog/2013/11/03/deploy-desans-blog-on-github</id>
+    <content type="html"><![CDATA[<p>1.先注册一个github账号， 创建github pages
+2.接下来设置 SH Keys .
+3.将SSH Key添加到GitHub
+4. 测试,为确保设置成功，现在可以测试设置成果。$ ssh -vT <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#x67;&#105;&#x74;&#x40;&#x67;&#105;&#116;&#104;&#117;&#98;&#x2e;&#x63;&#x6f;&#109;">&#103;&#105;&#116;&#x40;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#x63;&#111;&#109;</a></p>
+
+<p>1.安装Octopress
+git clone git://github.com/imathis/octopress.git username.github.com</p>
+
+<p>rake setup_github_pages //配置github项目地址 接下来会提示输入url
+Enter the read/write url for your repository
+(For example, &lsquo;git@github.com:your_username/your_username.github.com)</p>
+
+<p>rake install //是安装Octopress默认主题的
+rake new_post[&ldquo;Hello World&rdquo;] //建立新文章，文章存放在source/_post里面，格式为md的，现在就找个爽快点的<a href="#editor">编辑器</a>来写文章了</p>
+
+<p>rake preview //开启站点预览，动态生成， <a href="http://127.0.0.1:4000">http://127.0.0.1:4000</a>
+rake generate //生成静态文件
+rake deploy //生成静态并部署到github
+选择性的备份source文件夹到github，这样就有了文章md源文件的版本管理</p>
+
+<p>提交的代码到git库
+git add .
+git commit -m &ldquo;your message log 例：保存source文件夹，文章源文件&rdquo;
+git push origin source //建立sourch分支并保存</p>
+
+<p>以后写文章就只需要用
+rake generate
+rake deploy</p>
+]]></content>
+  </entry>
   
 </feed>
